@@ -36,7 +36,7 @@ Here's an example of calling a `cleanup()` function on a Object before it gets
 garbage collected:
 
 ``` js
-var weak = require('weak')
+var weak = require('mt-node-weak')
 
 // we are going to "monitor" this Object and invoke "cleanup"
 // before the object is garbage collected
@@ -81,7 +81,7 @@ work really well for this:
 
 ``` js
 var http = require('http')
-  , weak = require('weak')
+  , weak = require('mt-node-weak')
 
 http.createServer(function (req, res) {
   weak(req, gcReq)
