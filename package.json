@@ -1,9 +1,10 @@
 {
   "author": "Ben Noordhuis <info@bnoordhuis.nl>",
   "contributors": [
-    "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)"
+    "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
+    "Seven <fengzilijie@qq.com> (https://github.com/fallending)"
   ],
-  "name": "weak",
+  "name": "mt-node-weak",
   "license": "MIT",
   "description": "Make weak references to JavaScript Objects.",
   "keywords": [
@@ -15,7 +16,7 @@
     "function",
     "callback"
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/TooTallNate/node-weak.git"
