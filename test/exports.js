@@ -1,32 +1,29 @@
-var assert = require('assert');
-var weak = require('../')
+var assert = require("assert");
+var weak = require("../");
 
-function checkFunction (prop) {
+function checkFunction(prop) {
   it('should have a function "' + prop + '"', function () {
-    assert('function' == typeof weak[prop]);
-  })
+    assert("function" == typeof weak[prop]);
+  });
 }
 
-describe('exports', function () {
+describe("exports", function () {
+  afterEach(gc);
 
-  afterEach(gc)
+  it("should be a function", function () {
+    assert("function" == typeof weak);
+  });
 
-  it('should be a function', function () {
-    assert('function' == typeof weak);
-  })
-
-  checkFunction('get')
-  checkFunction('create')
-  checkFunction('isWeakRef')
-  checkFunction('isNearDeath')
-  checkFunction('isDead')
-  checkFunction('callbacks')
-  checkFunction('addCallback')
-  checkFunction('removeCallback')
-  checkFunction('removeCallbacks')
+  checkFunction("get");
+  checkFunction("create");
+  checkFunction("isWeakRef");
+  checkFunction("isDead");
+  checkFunction("callbacks");
+  checkFunction("addCallback");
+  checkFunction("removeCallback");
+  checkFunction("removeCallbacks");
 
   it('should be a circular reference to "create"', function () {
     assert(weak === weak.create);
-  })
-
-})
+  });
+});
